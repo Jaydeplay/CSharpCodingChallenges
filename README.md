@@ -1,5 +1,5 @@
 # CSharpCodingChallenges
-Some of my solutions to coding challenges, such as in RB Whitaker's C# Player's Guide
+Some of my solutions (built in console applications) to coding challenges, such as in RB Whitaker's C# Player's Guide
 
 001. Hunting The Manticore - C# Player's Guide
 
