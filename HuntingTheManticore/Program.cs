@@ -1,5 +1,3 @@
-﻿using System;
-
 // Setting Up Variables
 int? distance;
 int? aim;
@@ -8,6 +6,13 @@ int damage = 1;
 string blastType = "Normal Blast";
 double manticoreHealth = 10.0;
 double cityHealth = 15.0;
+
+void FragWrite(string msg, ConsoleColor textColor, bool end)
+{
+    Console.ForegroundColor = textColor;
+    Console.Write(msg + " ");
+    if (end) { Console.WriteLine(" "); }
+}
 
 // Breaking Down Steps into Methods
 void Player1() // Player 1's move, sets the Manticore's position
