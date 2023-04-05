@@ -7,7 +7,7 @@ string blastType = "Normal Blast";
 double manticoreHealth = 10.0;
 double cityHealth = 15.0;
 
-void FragWrite(string msg, ConsoleColor? textColor = null, bool end = false)
+void FragWrite(string msg, ConsoleColor? textColor = null, bool end = false) // Writes in fragmented messages to customize certain fragments
 {
     if (textColor != null) {Console.ForegroundColor = textColor;}
     Console.Write(msg + " ");
@@ -17,7 +17,7 @@ void FragWrite(string msg, ConsoleColor? textColor = null, bool end = false)
 // Breaking Down Steps into Methods
 void Player1() // Player 1's move, sets the Manticore's position
 {
-    Console.Write("Manticore Pilot, set your position of the Manticore (0-100)... ");
+    FragWrite("Manticore Pilot, set your position of the Manticore (0-100)...", ConsoleColor.White);
     distance = Convert.ToInt32(Console.ReadLine());
     Console.Clear();
 }
@@ -32,12 +32,12 @@ void DisplayStatus() // Displays all stats
 {
     // Round Status Display
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine("----------------------------------------------------------------");
-    Console.Write("STATUS: Round ");
+    FragWrite("----------------------------------------------------------------", ConsoleColor.White, true);
+    FragWrite("STATUS: Round");
     Console.ForegroundColor = ConsoleColor.DarkGray;
     Console.Write(round);
     Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("  City Health: ");
+    Console.Write(" City Health: ");
     Console.ForegroundColor = HealthColor(cityHealth / 15);
     Console.Write(cityHealth);
     Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -64,32 +64,32 @@ void DisplayStatus() // Displays all stats
     
 }
 
-void CalculateDamage()
+ConsoleColor CalculateDamage() // Calculates the damage and blast type from round number
 {
     if (round % 3 == 0 && round % 5 == 0)
     {
         blastType = "Explosive Blast";
         damage = 10;
-        Console.ForegroundColor = ConsoleColor.Blue;
+        return ConsoleColor.Blue;
     } else if (round % 3 == 0) 
     {
         blastType = "Fire Blast";
         damage = 3;
-        Console.ForegroundColor = ConsoleColor.Red;
+        return ConsoleColor.Red;
     } else if (round % 5 == 0) 
     {
         blastType = "Electric Blast";
         damage = 3;
-        Console.ForegroundColor = ConsoleColor.Yellow;
+        return ConsoleColor.Yellow;
     } else
     {
         blastType = "Normal Blast";
         damage = 1;
-        Console.ForegroundColor = ConsoleColor.DarkGray;
+        return ConsoleColor.DarkGray;
     }
 }
 
-ConsoleColor HealthColor(double fraction)
+ConsoleColor HealthColor(double fraction) // Outputs color determined by health
 {
     if (fraction < 0.33)
     {
@@ -103,7 +103,7 @@ ConsoleColor HealthColor(double fraction)
     }
 }
 
-void AimAndFire()
+void AimAndFire() // Guessing the Distance
 {
     Console.Write("Cannon Operator, set the aim for the Magic Cannon (0-100)... ");
     aim = Convert.ToInt32(Console.ReadLine());
