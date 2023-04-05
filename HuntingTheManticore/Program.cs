@@ -7,11 +7,11 @@ string blastType = "Normal Blast";
 double manticoreHealth = 10.0;
 double cityHealth = 15.0;
 
-void FragWrite(string msg, ConsoleColor textColor, bool end)
+void FragWrite(string msg, ConsoleColor? textColor = null, bool end = false)
 {
-    Console.ForegroundColor = textColor;
+    if (textColor != null) {Console.ForegroundColor = textColor;}
     Console.Write(msg + " ");
-    if (end) { Console.WriteLine(" "); }
+    if (end) {Console.WriteLine(" ");}
 }
 
 // Breaking Down Steps into Methods
