@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/jaeden/Documents/codingProjects/HuntingTheManticore/HuntingTheManticore.csproj": {}
+    "/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/HuntingTheManticore.csproj": {}
   },
   "projects": {
-    "/home/jaeden/Documents/codingProjects/HuntingTheManticore/HuntingTheManticore.csproj": {
+    "/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/HuntingTheManticore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jaeden/Documents/codingProjects/HuntingTheManticore/HuntingTheManticore.csproj",
+        "projectUniqueName": "/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/HuntingTheManticore.csproj",
         "projectName": "HuntingTheManticore",
-        "projectPath": "/home/jaeden/Documents/codingProjects/HuntingTheManticore/HuntingTheManticore.csproj",
+        "projectPath": "/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/HuntingTheManticore.csproj",
         "packagesPath": "/home/jaeden/.nuget/packages/",
-        "outputPath": "/home/jaeden/Documents/codingProjects/HuntingTheManticore/obj/",
+        "outputPath": "/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jaeden/.nuget/NuGet/NuGet.Config"

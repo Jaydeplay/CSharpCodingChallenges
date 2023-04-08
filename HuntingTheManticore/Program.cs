@@ -9,7 +9,7 @@ double cityHealth = 15.0;
 
 void FragWrite(string msg, ConsoleColor? textColor = null, bool end = false) // Writes in fragmented messages to customize certain fragments
 {
-    if (textColor != null) {Console.ForegroundColor = textColor;}
+    if (textColor != null) {Console.ForegroundColor = (ConsoleColor)textColor;}
     Console.Write(msg + " ");
     if (end) {Console.WriteLine(" ");}
 }
@@ -34,34 +34,21 @@ void DisplayStatus() // Displays all stats
     Console.ForegroundColor = ConsoleColor.White;
     FragWrite("----------------------------------------------------------------", ConsoleColor.White, true);
     FragWrite("STATUS: Round");
-    Console.ForegroundColor = ConsoleColor.DarkGray;
-    Console.Write(round);
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.Write(" City Health: ");
-    Console.ForegroundColor = HealthColor(cityHealth / 15);
-    Console.Write(cityHealth);
-    Console.ForegroundColor = ConsoleColor.DarkGray;
-    Console.Write("/15");
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("  Manticore Health: ");
-    Console.ForegroundColor = HealthColor(manticoreHealth / 10);
-    Console.Write(manticoreHealth);
-    Console.ForegroundColor = ConsoleColor.DarkGray;
-    Console.WriteLine("/10");
+    FragWrite(Convert.ToString(round), ConsoleColor.DarkGray);
+    FragWrite(" City Health:", ConsoleColor.White);
+    FragWrite(Convert.ToString(cityHealth), HealthColor(cityHealth / 15));
+    FragWrite("/15", ConsoleColor.DarkGray);
+    FragWrite(" Manticore Health:", ConsoleColor.White);
+    FragWrite(Convert.ToString(manticoreHealth), HealthColor(manticoreHealth / 10));
+    FragWrite("/10", ConsoleColor.DarkGray, true);
 
 
     // Blast Type Display
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("Cannon is charged with a(n) ");
-    CalculateDamage();
-    Console.Write(blastType);
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.Write(" dealing ");
-    Console.ForegroundColor = ConsoleColor.Magenta;
-    Console.Write(damage);
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine(" damage on hit...");
-    
+    FragWrite("Cannon is charged with a(n)", ConsoleColor.DarkGray);
+    FragWrite(Convert.ToString(blastType), CalculateDamage());
+    FragWrite("dealing", ConsoleColor.DarkGray);
+    FragWrite(Convert.ToString(damage), ConsoleColor.Magenta);
+    FragWrite(" damage on hit...", ConsoleColor.DarkGray);
 }
 
 ConsoleColor CalculateDamage() // Calculates the damage and blast type from round number
