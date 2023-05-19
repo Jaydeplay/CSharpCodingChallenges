@@ -1,5 +1,5 @@
 # Hunting The Manticore
-This program is a game about trying to guess where an invading ship, the Manticore, is and to shoot it down to protect the city of Consolas.
+This simple beginner program is a game about trying to guess where an invading ship, the Manticore, is and to shoot it down to protect the city of Consolas.
 
 ### Blast Types:
 - Fire Blasts charge on every 3rd crank and deal 3 damage to the Manticore.
