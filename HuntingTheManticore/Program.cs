@@ -37,18 +37,19 @@ void DisplayStatus() // Displays all stats
     FragWrite(Convert.ToString(round), ConsoleColor.DarkGray);
     FragWrite(" City Health:", ConsoleColor.White);
     FragWrite(Convert.ToString(cityHealth), HealthColor(cityHealth / 15));
-    FragWrite("/15", ConsoleColor.DarkGray);
+    FragWrite("/ 15", ConsoleColor.DarkGray);
     FragWrite(" Manticore Health:", ConsoleColor.White);
     FragWrite(Convert.ToString(manticoreHealth), HealthColor(manticoreHealth / 10));
-    FragWrite("/10", ConsoleColor.DarkGray, true);
+    FragWrite("/ 10", ConsoleColor.DarkGray, true);
 
 
     // Blast Type Display
     FragWrite("Cannon is charged with a(n)", ConsoleColor.DarkGray);
-    FragWrite(Convert.ToString(blastType), CalculateDamage());
+    ConsoleColor blastColor = CalculateDamage();
+    FragWrite(Convert.ToString(blastType), blastColor);
     FragWrite("dealing", ConsoleColor.DarkGray);
     FragWrite(Convert.ToString(damage), ConsoleColor.Magenta);
-    FragWrite(" damage on hit...", ConsoleColor.DarkGray);
+    FragWrite("damage on hit...", ConsoleColor.DarkGray);
 }
 
 ConsoleColor CalculateDamage() // Calculates the damage and blast type from round number
@@ -72,7 +73,7 @@ ConsoleColor CalculateDamage() // Calculates the damage and blast type from roun
     {
         blastType = "Normal Blast";
         damage = 1;
-        return ConsoleColor.DarkGray;
+        return ConsoleColor.White;
     }
 }
 
@@ -95,7 +96,7 @@ void AimAndFire() // Guessing the Distance
     FragWrite("Cannon Operator, set the aim for the Magic Cannon (0-100)... ");
     aim = Convert.ToInt32(Console.ReadLine());
 
-    FragWrite("The blast ");
+    FragWrite("The blast", ConsoleColor.White);
     if (aim != distance)
     {
         string missReason;
@@ -107,7 +108,7 @@ void AimAndFire() // Guessing the Distance
             missReason = "FELL SHORT of";
         }
         FragWrite(missReason, ConsoleColor.Red);
-        FragWrite(" the target...", ConsoleColor.White);
+        FragWrite("the target...", ConsoleColor.White, true);
         return;
     }
     FragWrite("HITS", ConsoleColor.Green);
