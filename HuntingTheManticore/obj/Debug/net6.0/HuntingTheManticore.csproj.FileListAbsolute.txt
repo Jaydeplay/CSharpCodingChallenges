@@ -1,0 +1,15 @@
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/bin/Debug/net6.0/HuntingTheManticore
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/bin/Debug/net6.0/HuntingTheManticore.deps.json
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/bin/Debug/net6.0/HuntingTheManticore.runtimeconfig.json
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/bin/Debug/net6.0/HuntingTheManticore.dll
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/bin/Debug/net6.0/ref/HuntingTheManticore.dll
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/bin/Debug/net6.0/HuntingTheManticore.pdb
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.csproj.AssemblyReference.cache
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.GeneratedMSBuildEditorConfig.editorconfig
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.AssemblyInfoInputs.cache
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.AssemblyInfo.cs
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.csproj.CoreCompileInputs.cache
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.dll
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/ref/HuntingTheManticore.dll
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.pdb
+/home/jaeden/Documents/codingProjects/CSharpCodingChallenges/HuntingTheManticore/obj/Debug/net6.0/HuntingTheManticore.genruntimeconfig.cache

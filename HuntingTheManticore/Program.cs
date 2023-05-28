@@ -92,28 +92,26 @@ ConsoleColor HealthColor(double fraction) // Outputs color determined by health
 
 void AimAndFire() // Guessing the Distance
 {
-    Console.Write("Cannon Operator, set the aim for the Magic Cannon (0-100)... ");
+    FragWrite("Cannon Operator, set the aim for the Magic Cannon (0-100)... ");
     aim = Convert.ToInt32(Console.ReadLine());
 
-    Console.Write("The blast ");
+    FragWrite("The blast ");
     if (aim != distance)
     {
-        Console.ForegroundColor = ConsoleColor.Red;
+        string missReason;
         if (aim > distance) 
         {
-            Console.Write("OVERHOT");
+            missReason = "OVERHOT";
         } else 
         {
-            Console.Write("FELL SHORT of");
+            missReason = "FELL SHORT of";
         }
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine(" the target...");
+        FragWrite(missReason, ConsoleColor.Red);
+        FragWrite(" the target...", ConsoleColor.White);
         return;
     }
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.Write("HITS ");
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine("the target!!!");
+    FragWrite("HITS", ConsoleColor.Green);
+    FragWrite("the target!!!", ConsoleColor.White, true);
     manticoreHealth -= damage;
 
 }
@@ -121,7 +119,7 @@ void AimAndFire() // Guessing the Distance
 // LOOP
 Player1();
 
-Console.WriteLine("It is the defense's turn...");
+FragWrite("It is the defense's turn...");
 
 while (manticoreHealth > 0 && cityHealth > 0)
 {
@@ -132,9 +130,7 @@ while (manticoreHealth > 0 && cityHealth > 0)
 
 if (manticoreHealth < 1)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("The Manticore has been destroyed!!! The city of Consolas has been saved!!!");
+    FragWrite("The Manticore has been destroyed!!! The city of Consolas has been saved!!!", ConsoleColor.Green, true);
 } else {
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine("Our city has been destroyed... We failed...");
+    FragWrite("Our city has been destroyed... We failed...", ConsoleColor.Red, true);
 }
